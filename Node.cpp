@@ -5,30 +5,31 @@
 using namespace std;
 
 Node::Node(){
-  student = NULL;
-  node = NULL;
+  node= NULL;
+  value = 0;
 }
 
 Node::~Node(){
-
+  delete &value;
+  node = NULL;
 }
 
 Node* Node::getNext(){//get the next node pointer
-
+  return node;
 }
 
 Student* Node::getStudent(){//get student pointer
-
+  return NULL;
 }
 
-void Node::setNext(Node*){//set the next pointer to the corresponding node point
-
+void Node::setNext(Node* newnode){//set the next pointer to the corresponding node point
+  node = newnode;
 }
 
-/*Node* Node::createNode(Student*){//create a new node
-
+void Node::setValue(int newvalue){
+  value = newvalue;
 }
 
-void Node::deleteNode(){//deletng the current node, including the corresponding student
-
-}*/
+int Node::getValue(){
+  return value;
+}
