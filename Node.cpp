@@ -1,6 +1,6 @@
 #include <cstring>
 #include <iostream>
-#include "node.h"
+#include "Node.h"
 
 using namespace std;
 
@@ -19,7 +19,7 @@ Node* Node::getNext(){//get the next node pointer
 }
 
 Student* Node::getStudent(){//get student pointer
-  return NULL;
+  return student;
 }
 
 void Node::setNext(Node* newnode){//set the next pointer to the corresponding node point

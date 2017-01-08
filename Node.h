@@ -1,11 +1,10 @@
 #include <cstring>
 #include <iostream>
+#include "Student.h"
 
 using namespace std;
 
-class Student;
-
-class Node{
+class Node:public Student{
  private:
   Student* student;
   Node* node;
