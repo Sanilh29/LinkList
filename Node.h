@@ -1,10 +1,12 @@
 #include <cstring>
 #include <iostream>
-#include "Student.h"
+//#include "Student.h"
 
 using namespace std;
 
-class Node:public Student{
+class Student;
+
+class Node{
  private:
   Student* student;
   Node* node;
