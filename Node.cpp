@@ -4,13 +4,13 @@
 
 using namespace std;
 
-Node::Node(){
+Node::Node(/*Student* student*/){
   node= NULL;
   value = 0;
 }
 
 Node::~Node(){
-  delete &value;
+  delete &info;
   node = NULL;
 }
 
@@ -19,17 +19,23 @@ Node* Node::getNext(){//get the next node pointer
 }
 
 Student* Node::getStudent(){//get student pointer
-  return student;
+  return info;
 }
 
 void Node::setNext(Node* newnode){//set the next pointer to the corresponding node point
   node = newnode;
 }
 
-void Node::setValue(int newvalue){
+/*void Node::setValue(int newvalue){
   value = newvalue;
 }
 
 int Node::getValue(){
   return value;
+}*/
+
+void Node::push_back(Student* student){
+  Node* currentNode = this;
+  for(currentNode; currentNode->getNext() != NULL; currentNode = currentNode->getNext());
+  currentNode->setNext(new Node(student));
 }

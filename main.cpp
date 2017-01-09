@@ -4,6 +4,17 @@
 
 using namespace std;
 
+struct Student{
+  char* firstname;
+  char* lastname;
+  float gpa;
+  int id;
+};
+
+int main(){
+
+}
+/*
 void add(int newvalue);
 void print (Node* node);
 
@@ -44,4 +55,4 @@ void print(Node* node){
   else{
     //do nothing
   }
-}
+  }*/
