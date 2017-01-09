@@ -22,13 +22,15 @@ int main(){
   Student* s2 = new Student(2);
   Student* s3 = new Student(3);
   
-  /* Node* header = new Node(s1);
+  Node* header = new Node(s1);
   header->push_back(s2);
-  header->push_back(s3);*/
+  header->push_back(s3);
 
-  // cout << header->end()->getStudent()->getId() << endl;
+  cout << header->end()->getStudent()->getId() << endl;
 
-  
+  for(Node* currentNode = header; currentNode->getNext() != NULL; currentNode = currentNode->getNext()){
+    cout << currentNode->getStudent()->getId() << endl;
+  }
 }
 /*
 void add(int newvalue);

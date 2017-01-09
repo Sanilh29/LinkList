@@ -24,3 +24,24 @@ Student* Node::getStudent(){//get student pointer
 void Node::setNext(Node* newnode){//set the next pointer to the corresponding node point
   node = newnode;
 }
+
+void Node::push_back(Student* student){
+  Node* currentNode = this;
+  for(currentNode; currentNode->getNext() != NULL; currentNode = currentNode->getNext());
+  currentNode->setNext(new Node(student));
+}
+
+Node* Node::end(){
+  Node* currentNode = this;
+  for(currentNode; currentNode->getNext() != NULL; currentNode = currentNode->getNext());
+  return currentNode;
+}
+
+void Node::erase(){
+  if (node){
+    node->erase();
+    delete this;
+  }
+  delete &info;
+
+}
