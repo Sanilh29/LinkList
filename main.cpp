@@ -1,3 +1,5 @@
+//Sanil Hattangadi, the main method tests the Nide.h and Node.cpp classes and header
+//I create 3 false students with a gpa and then print them out in the order they were added
 #include <cstring>
 #include <vector>
 #include <iostream>
