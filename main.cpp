@@ -26,11 +26,10 @@ int main(){
   header->push_back(s2);
   header->push_back(s3);
 
-  cout << header->end()->getStudent()->getId() << endl;
-
   for(Node* currentNode = header; currentNode->getNext() != NULL; currentNode = currentNode->getNext()){
     cout << currentNode->getStudent()->getId() << endl;
   }
+  cout << header->end()->getStudent()->getId() << endl;
 }
 /*
 void add(int newvalue);

@@ -22,5 +22,5 @@ class Node{
   Node* getNext(); //get the next Node pointer
   void push_back(Student* student); //adds a new node to the end
   Node* end(); 
-  void erase();
+  //void erase();
 };

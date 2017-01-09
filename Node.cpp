@@ -37,11 +37,11 @@ Node* Node::end(){
   return currentNode;
 }
 
-void Node::erase(){
+/*void Node::erase(){
   if (node){
     node->erase();
     delete this;
   }
   delete &info;
 
-}
+}*/
