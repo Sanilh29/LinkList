@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class Student{
+class Student{//create student class that gets an already 
 public:
   Student(int a){
     id= a;
@@ -17,7 +17,7 @@ private:
   int id;
 };
 
-int main(){
+int main(){//create the nodes to test
   Student* s1 = new Student(1);
   Student* s2 = new Student(2);
   Student* s3 = new Student(3);
@@ -26,10 +26,10 @@ int main(){
   header->push_back(s2);
   header->push_back(s3);
 
-  for(Node* currentNode = header; currentNode->getNext() != NULL; currentNode = currentNode->getNext()){
+  for(Node* currentNode = header; currentNode->getNext() != NULL; currentNode = currentNode->getNext()){//prints out all the nodes but the last one cause the last one is null
     cout << currentNode->getStudent()->getId() << endl;
   }
-  cout << header->end()->getStudent()->getId() << endl;
+  cout << header->end()->getStudent()->getId() << endl;//prints out last node
 }
 /*
 void add(int newvalue);
