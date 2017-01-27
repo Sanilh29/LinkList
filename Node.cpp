@@ -1,4 +1,4 @@
-//Sanil Hattangadi, creates the method for Nodes
+B//Sanil Hattangadi, creates the method for Nodes
 #include <cstring>
 #include <iostream>
 #include "Node.h"
@@ -27,7 +27,7 @@ void Node::setNext(Node* newnode){//set the next pointer to the corresponding no
 
 void Node::push_back(Student* student){
   Node* currentNode = this;
-  for(currentNode; currentNode->getNext() != NULL; currentNode = currentNode->getNext());
+  for(currentNode; currentNode != NULL; currentNode = currentNode->getNext());
   currentNode->setNext(new Node(student));
 }
 
