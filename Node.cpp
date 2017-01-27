@@ -7,10 +7,12 @@ using namespace std;
 
 Node::Node(Student* student){//keeps track of the students info
   info = student;//places the info into students pointer
+  node = NULL;
 }
 
 Node::~Node(){//deleting the current node, including the correponding student
   delete &info;//deletes info
+  node = NULL;
 }
 
 Node* Node::getNext(){//get the next node pointer
